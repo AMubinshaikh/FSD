@@ -19,23 +19,26 @@ single inheritance example
 */
 
 using System;
-namespace console {
-
-    public class Students // base class
-    {
-        public int roll = 1;
-    }
-    public class Teacher : Students // class Teacher is Derived class inherits property of Base class
-    {
-        public float perc = 89.34F;
-    }
-    class Single_Inheritance {
-        public static void Main (string[] args) {
-            Teacher t = new Teacher ();
-
-            Console.WriteLine ("Roll Number: " + t.roll);
-            Console.WriteLine ("Percentage: " + t.perc);
-
-        }
-    }
-}
+namespace  console
+{
+    
+   public class Students  // base class
+    {  
+       public int roll = 1;  
+   }  
+   public class Teacher: Students  // class Teacher is Derived class inherits property of Base class
+   {  
+       public float perc = 89.34F;  
+   }  
+   class Single_Inheritance{  
+       public static void Main(string[] args)  
+        {  
+            Teacher t = new Teacher();  
+  
+            Console.WriteLine("Roll Number: " + t.roll);  
+            Console.WriteLine("Percentage: " + t.perc);  
+  
+        }   
+    }  
+    } 
+    
