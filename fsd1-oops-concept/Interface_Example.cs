@@ -12,76 +12,62 @@
  we can implement more than one interface
 */
 using System;
-namespace fsd1_oops_concept
-{
-public interface ICoachingCentre
-{
-    public void DisplaySubjects();
-    public void SelectedSubject();
-    public void CalculateFees();
-    public void PrintFeeReceipt();
-}
-public class MsTutorials : ICoachingCentre
-{
-    public void CalculateFees()
-    {
-        Console.WriteLine("calculating fees MsTutorials");
+namespace fsd1_oops_concept {
+    public interface ICoachingCentre {
+        public void DisplaySubjects ();
+        public void SelectedSubject ();
+        public void CalculateFees ();
+        public void PrintFeeReceipt ();
+    }
+    public class MsTutorials : ICoachingCentre {
+        public void CalculateFees () {
+            Console.WriteLine ("calculating fees MsTutorials");
+        }
+
+        public void DisplaySubjects () {
+            Console.WriteLine ("Your selected subject MsTutorials");
+        }
+
+        public void PrintFeeReceipt () {
+            Console.WriteLine ("fees receipt MsTutorials");
+        }
+
+        public void SelectedSubject () {
+            Console.WriteLine ("MsTutorials subject name\n english\n french\n science");
+        }
+    }
+    public class abcClasses : ICoachingCentre {
+        public void CalculateFees () {
+            Console.WriteLine ("calculating fees abcClasses");
+        }
+
+        public void DisplaySubjects () {
+            Console.WriteLine ("Your selected subject abcClasses");
+        }
+
+        public void PrintFeeReceipt () {
+            Console.WriteLine ("fees receipt abcClasses");
+        }
+
+        public void SelectedSubject () {
+            Console.WriteLine ("abcClasses subject name\n english\n french\n science ");
+        }
     }
 
-    public void DisplaySubjects()
-    {
-        Console.WriteLine("Your selected subject MsTutorials");
+    public class Interface_Example {
+        public static void Main (string[] args) {
+            MsTutorials ms = new MsTutorials ();
+            abcClasses abc = new abcClasses ();
+
+            ms.DisplaySubjects ();
+            ms.SelectedSubject ();
+            ms.CalculateFees ();
+            ms.PrintFeeReceipt ();
+
+            abc.DisplaySubjects ();
+            abc.SelectedSubject ();
+            abc.CalculateFees ();
+            abc.PrintFeeReceipt ();
+        }
     }
-
-    public void PrintFeeReceipt()
-    {
-         Console.WriteLine("fees receipt MsTutorials");
-    }
-
-    public void SelectedSubject()
-    {
-        Console.WriteLine("MsTutorials subject name\n english\n french\n science");
-    }
-}
-public class abcClasses : ICoachingCentre
-{
-    public void CalculateFees()
-    {
-       Console.WriteLine("calculating fees abcClasses");
-    }
-
-    public void DisplaySubjects()
-    {
-       Console.WriteLine("Your selected subject abcClasses");
-    }
-
-    public void PrintFeeReceipt()
-    {
-        Console.WriteLine("fees receipt abcClasses");
-    }
-
-    public void SelectedSubject()
-    {
-       Console.WriteLine("abcClasses subject name\n english\n french\n science ");
-    }
-}
-
-     public class Interface_Example
-    {
-public static void Main(string[] args)
-{
-    MsTutorials ms = new MsTutorials();
-    abcClasses abc = new abcClasses();
-
-    ms.DisplaySubjects();
-    ms.SelectedSubject();
-    ms.CalculateFees();
-    ms.PrintFeeReceipt();
-
-    abc.DisplaySubjects();
-    abc.SelectedSubject();
-    abc.CalculateFees();
-    abc.PrintFeeReceipt();
-   }
- }
 }
