@@ -1,4 +1,4 @@
-/*ABSTRACTION 
+ /*ABSTRACTION 
 is a process in which we focus display only necessary things and hide unnecessary objects
 in other words hide implementation details from user and display only essential features
 */
