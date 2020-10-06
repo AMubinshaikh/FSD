@@ -1,5 +1,5 @@
 // This is an interface Containing some functions which is not implemented 
-//means function declared but withod body
+//means function declared but without body
 //  interface is used to overcome multiple inheritance when we inherits two classes into one 
 //  LIKE class a : b,c
 //  there are chances of ambiguity 
