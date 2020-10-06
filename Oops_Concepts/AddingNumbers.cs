@@ -10,14 +10,14 @@ namespace Oops_Concepts
     {   
         // with two integer parameter
         
-         public static int AddNumbers(int number1, int number2) 
+         public int AddNumbers(int number1, int number2) 
          {
-               return number1 +number2; 
+               return number1 + number2; 
          }
          // same name function overloading but three parameter
          public int AddNumbers(int number1, int number2 , int number3) 
          {
-            return number1+number2+number3;
+            return number1 + number2 + number3;
          }
     }
 }

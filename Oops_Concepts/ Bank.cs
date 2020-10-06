@@ -8,25 +8,28 @@ namespace Oops_Concepts
 {
     public class Bank
     {
-        private int _pin;
-        private string _AccountHolderName;
-        public int AccountNumber = 1234567;
+        private int pinNumber;
+        private string accountHolderName;
+        public int accountNumber = 1234567;
         
-        public int pin { get { return _pin; } set { _pin = value; } }
+        public int pinNumberAccess {
+          get { return pinNumber; } 
+          set { pinNumber = value; } }
 
-        public string AccountHolderName { get { return _AccountHolderName; } 
-               set { _AccountHolderName = value; } }
+        public string accountHolderNameAccess {
+            get { return accountHolderName; } 
+            set { accountHolderName = value; } }
   
          // display because its necessary and public
-          public void display() 
+          public void DisplayPersonalDetails() 
         {
 
-            Console.WriteLine("Customer Details name ="+ AccountHolderName+  
-                     "And account number = " + AccountNumber );
+            Console.WriteLine("Customer Details name ="+ accountHolderNameAccess+  
+                     "And account number = " + accountNumber );
         }
         
         // private doesnt show its unnecessary
-        private void Displaypin() 
+        private void DisplayPin() 
         {
             Console.WriteLine("pin of customer");
         }

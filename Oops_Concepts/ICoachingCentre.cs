@@ -16,9 +16,9 @@ namespace Oops_Concepts
     public interface ICoachingCentre
     {
     
-    public void DisplaySubjects();
-    public void SelectedSubject();
-    public void CalculateFees();
-    public void PrintFeeReceipt();
+      public void DisplaySubjects();
+      public void SelectedSubject();
+      public void CalculateFees();
+      public void PrintFeeReceipt();
     }
 }

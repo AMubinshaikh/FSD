@@ -3,7 +3,7 @@ using System;
 namespace Oops_Concepts
 {
    public class MSTutorials : ICoachingCentre
-{
+    {
     public void CalculateFees()
     {
         Console.WriteLine("calculating fees MsTutorials");

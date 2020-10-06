@@ -30,7 +30,7 @@ namespace Oops_Concepts
              number1 = Convert.ToInt32(Console.ReadLine());
              number2 = Convert.ToInt32(Console.ReadLine());
              // calling function with class name because first function is static type function
-             Console.WriteLine("The sum of two Number is = " + AddingNumbers.AddNumbers(number1,number2)); 
+             Console.WriteLine("The sum of Three Number is = " + addingNumbers.AddNumbers(number1,number2)); 
 
              
             // calling function with object because second function is not static type function
@@ -57,19 +57,19 @@ namespace Oops_Concepts
 
             CarShowroom carShowroom = new CarShowroom();
              // we can access private feild using getter and setter accessor
-            carShowroom.CarKeyCode = 12345;
+            carShowroom.carKeyCodeAccess = 12345;
             carShowroom.EngineCode = "E4598GHF";
-            Console.WriteLine("Car Key Code = " + carShowroom.CarKeyCode);
+            Console.WriteLine("Car Key Code = " + carShowroom.carKeyCodeAccess);
             Console.WriteLine("Car Engine Code = " + carShowroom.EngineCode);
             carShowroom.GetBasicDetails("honda","city");
-            carShowroom.print();
+            carShowroom.DisplayCarDetails();
             //is inaccessible due to its protection level
             //carShowroom.CarEncryptDisplay(); 
 
             Bank bank = new Bank();
-            bank.AccountHolderName = "zubinshaikh";
+            bank.accountHolderNameAccess = "zubinshaikh";
             // accessible and no error
-            bank.display(); 
+            bank.DisplayPersonalDetails(); 
              //  inaccesible because it is private
             // bank.displayPin();
 

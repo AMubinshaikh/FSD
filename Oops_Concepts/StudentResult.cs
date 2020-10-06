@@ -10,7 +10,7 @@ namespace Oops_Concepts
     class TeacherClass : StudentResult // Teacher is derved class deriving from base Student 
     {
         public int marks = 89;
-        public float perc = 89.00F;
+        public float percentage = 89.00F;
 
         public void printName()
         {
@@ -24,7 +24,7 @@ namespace Oops_Concepts
     {
         public void printResult()
         {
-            Console.WriteLine("Result : \n Marks= " + marks + " \n Percentage = " + perc);
+            Console.WriteLine("Result : \n Marks= " + marks + " \n Percentage = " + percentage);
         }
 
     }
