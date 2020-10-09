@@ -44,68 +44,35 @@ namespace EngineerEfficiencyDemo
 {
     public class EngineersEfficiency 
     {
-        int[] arraySpeed = new int[100];
-        int[] arrayEfficiency = new int[100];
-        int arraySize;
-        int arrayLoop;
-        int sumOfSpeed=0;
-        int minimumEfficiency ;
-         int Result;
-
-        public void AcceptEngineerDetails () 
-        {
-            //accept number of engineers
-            Console.WriteLine ("Enter No Of Engineer");
-            arraySize = Convert.ToInt32 (Console.ReadLine ());
-            
-            Console.WriteLine ("Enter Speed of " + arraySize + " Engineers");
-            
-            //accept speed of engineers
-            for (arrayLoop = 0; arrayLoop < arraySize; arrayLoop++) 
-            {
-                Console.WriteLine ("Enter a Speed for Engineer = " + (arrayLoop + 1));
-                arraySpeed[arrayLoop] = Convert.ToInt32 (Console.ReadLine ());
-            }
-            
-             //accept efficiency of engineers
-            for (arrayLoop = 0; arrayLoop < arraySize; arrayLoop++) 
-            {
-                Console.WriteLine ("Enter a Efficiency for Engineer = " + (arrayLoop + 1));
-                arrayEfficiency[arrayLoop] = Convert.ToInt32 (Console.ReadLine ());
-            }
-
-        }
-
-        public void CalculatePerformance ()
+ 
+        public int sumOfSpeed=0;
+        public int minimumEfficiency ;
+        public void CalculatePerformance (int[] arraySpeed, int[] arrayEfficiency, int numberOfEngineer)
         {
             int[] tempIndex = new int[100];
             int[] tempEfficiency = new int[100];
             int[] tempSpeed = new int[100];
-            int engineerNumber;
             int selectedEngineerNumber;
            
-            Console.WriteLine ("Please enter number of Engineer ");
-            engineerNumber = Convert.ToInt32 (Console.ReadLine ());
-
-            for (arrayLoop = 0; arrayLoop < engineerNumber; arrayLoop++) 
+            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
             {
                 Console.WriteLine ("Please select Engineer Number");
                 selectedEngineerNumber = Convert.ToInt32 (Console.ReadLine ());
                 tempIndex[arrayLoop] = (selectedEngineerNumber - 1);
             }
 
-            for (arrayLoop = 0; arrayLoop < engineerNumber; arrayLoop++) 
+            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
             {
                 tempEfficiency[arrayLoop] = arrayEfficiency[tempIndex[arrayLoop]];
                  tempSpeed[arrayLoop] = arraySpeed[tempIndex[arrayLoop]];    
             }
 
-            for (arrayLoop = 0; arrayLoop < engineerNumber; arrayLoop++) 
+            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
             {
                 Console.WriteLine (tempEfficiency[arrayLoop]);
             }
             minimumEfficiency = tempEfficiency[0];
-            for (arrayLoop = 0; arrayLoop < engineerNumber; arrayLoop++) 
+            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
             {
                 if (minimumEfficiency > tempEfficiency[arrayLoop]) 
                 {
@@ -113,25 +80,11 @@ namespace EngineerEfficiencyDemo
                 }     
             }
 
-            for (arrayLoop = 0; arrayLoop < engineerNumber; arrayLoop++) 
+            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
             {
                 sumOfSpeed = sumOfSpeed + tempSpeed[arrayLoop];  
             }
-            
         }
-
-        public void CalculateResult()
-        {
-            Result = sumOfSpeed*minimumEfficiency;
-        }
-
-        public void DisplayResult()
-        {
-               Console.WriteLine ("min= " + minimumEfficiency);
-               Console.WriteLine ("sum of speed= " + sumOfSpeed);
-               Console.WriteLine ("Result = " + Result);
-        }
-            
     }
 }
 
