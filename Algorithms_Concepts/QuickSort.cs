@@ -1,71 +1,49 @@
+//Quick Sort algorithm with recursion
 using System;
 namespace Algorithms_Concepts
 {
-    public class QuickSort
+    public class QuickSortNumbers
     {
-         int arrayLoop;
-        int arraySize;
-        int[] array = new int[100];
-       
         public int len;
-         public void AcceptArray()
-        {
-               Console.WriteLine ("Define Array size");
-               arraySize = Convert.ToInt32 (Console.ReadLine ());
-             
-               for (arrayLoop = 0; arrayLoop < arraySize; arrayLoop++)
-               {
-                   Console.WriteLine ("Enter Value");
-                   array[arrayLoop] = Convert.ToInt32 (Console.ReadLine ());
-               }
+        public void QuickSort (int[] numbers) {
+            sort (0, len - 1, numbers);
         }
-        public void QuickSortMethod () {
-            sort (0, len - 1);
-        }
-        public void sort (int left, int right) {
-            int pivot, leftend, rightend;
-            leftend = left;
-            rightend = right;
-            pivot = array[left];
+        public void sort (int left, int right, int[] numbers) {
+            int pivot, lowerEnd, upperEnd;
+            lowerEnd = left;
+            upperEnd = right;
+            pivot = numbers[left];
             while (left < right) {
-                while ((array[right] >= pivot) && (left < right)) {
+                while ((numbers[right] >= pivot) && (left < right)) {
                     right--;
                 }
 
                 if (left != right) {
-                    array[left] = array[right];
+                    numbers[left] = numbers[right];
                     left++;
                 }
 
-                while ((array[left] <= pivot) && (left < right)) {
+                while ((numbers[left] <= pivot) && (left < right)) {
                     left++;
                 }
 
                 if (left != right) {
-                    array[right] = array[left];
+                    numbers[right] = numbers[left];
                     right--;
                 }
             }
 
-            array[left] = pivot;
+            numbers[left] = pivot;
             pivot = left;
-            left = leftend;
-            right = rightend;
+            left = lowerEnd;
+            right = upperEnd;
 
             if (left < pivot) {
-                sort (left, pivot - 1);
+                sort (left, pivot - 1, numbers);
             }
 
             if (right > pivot) {
-                sort (pivot + 1, right);
-            }
-        }
-       
-        public void DisplaySortedArray()
-        {
-            for (int j = 0; j < arraySize; j++) 
-            {
-                Console.WriteLine (array[j]);
+                sort (pivot + 1, right, numbers);
             }
         }
     }

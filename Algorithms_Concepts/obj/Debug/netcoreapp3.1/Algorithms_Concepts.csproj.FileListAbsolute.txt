@@ -1,0 +1,13 @@
+D:\FSD\Algorithms_Concepts\bin\Debug\netcoreapp3.1\Algorithms_Concepts.exe
+D:\FSD\Algorithms_Concepts\bin\Debug\netcoreapp3.1\Algorithms_Concepts.deps.json
+D:\FSD\Algorithms_Concepts\bin\Debug\netcoreapp3.1\Algorithms_Concepts.runtimeconfig.json
+D:\FSD\Algorithms_Concepts\bin\Debug\netcoreapp3.1\Algorithms_Concepts.runtimeconfig.dev.json
+D:\FSD\Algorithms_Concepts\bin\Debug\netcoreapp3.1\Algorithms_Concepts.dll
+D:\FSD\Algorithms_Concepts\bin\Debug\netcoreapp3.1\Algorithms_Concepts.pdb
+D:\FSD\Algorithms_Concepts\obj\Debug\netcoreapp3.1\Algorithms_Concepts.csprojAssemblyReference.cache
+D:\FSD\Algorithms_Concepts\obj\Debug\netcoreapp3.1\Algorithms_Concepts.AssemblyInfoInputs.cache
+D:\FSD\Algorithms_Concepts\obj\Debug\netcoreapp3.1\Algorithms_Concepts.AssemblyInfo.cs
+D:\FSD\Algorithms_Concepts\obj\Debug\netcoreapp3.1\Algorithms_Concepts.csproj.CoreCompileInputs.cache
+D:\FSD\Algorithms_Concepts\obj\Debug\netcoreapp3.1\Algorithms_Concepts.dll
+D:\FSD\Algorithms_Concepts\obj\Debug\netcoreapp3.1\Algorithms_Concepts.pdb
+D:\FSD\Algorithms_Concepts\obj\Debug\netcoreapp3.1\Algorithms_Concepts.genruntimeconfig.cache

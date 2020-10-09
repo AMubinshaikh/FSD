@@ -1,43 +1,23 @@
+//binary search with recursive function
+
 using System;
 namespace Algorithms_Concepts
 {
  public class BinarySearch
  {
-     int arrayLoop;
-        int arraySize;
-        int search;
-        int[] array = new int[100];
-        public void AcceptArray()
-        {
-               Console.WriteLine ("Define Array size");
-               arraySize = Convert.ToInt32 (Console.ReadLine ());
-             
-               for (arrayLoop = 0; arrayLoop < arraySize; arrayLoop++)
-               {
-                   Console.WriteLine ("Enter Value");
-                   array[arrayLoop] = Convert.ToInt32 (Console.ReadLine ());
-               }
-        }
-          public int BinarySearchMethod (int[] arr, int min, int max, int search) {
+          public int SearchElementIndex (int[] numbers, int min, int max, int searchElement) 
+          {
             int mean = (min + max) / 2;
-            if (arr[mean] == search) {
+            if (numbers[mean] == searchElement) {
                 return mean;
             } else if (min >= max) {
                 return -1;
-            } else if (search < arr[mean]) {
-                return BinarySearchMethod (arr, min, mean, search);
+            } else if (searchElement < numbers[mean]) {
+                return SearchElementIndex (numbers, min, mean, searchElement);
             } else {
-                return BinarySearchMethod (arr, mean, max, search);
+                return SearchElementIndex (numbers, mean, max, searchElement);
             }
-        }
-    
-
-        public void SearchElement()
-        {
-             Console.WriteLine ("Enter number to search?");
-            search = Convert.ToInt32 (Console.ReadLine ());
-            Console.WriteLine ("index no. is = " + BinarySearchMethod (array, 0, array.Length - 1, search));
-        }  
+        }   
  }
 
 }

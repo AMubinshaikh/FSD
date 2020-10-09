@@ -1,70 +1,69 @@
 ﻿using System;
 
-namespace Algorithms_Concepts
-{
-    class Program
-    {
-        static void Main(string[] args)
+namespace Algorithms_Concepts {
+    class Program {
+        static void Main (string[] args) 
         {
-            //Bubble sot Ascending Order
-
-            // BubbleSort bubbleSort = new BubbleSort();
-            // bubbleSort.AcceptArray();
-            // bubbleSort.SortArray();
-            // bubbleSort.PrintSortArray();
-
-            //---------------------------
-
-            //Bubble sot Descending Order
-
-            // BubbleSortDescending bubbleSortDescending = new BubbleSortDescending();
-            // bubbleSortDescending.AcceptArray();
-            // bubbleSortDescending.SortArray();
-            // bubbleSortDescending.PrintSortArray();
-
-            //---------------------------
-
-            //Binary Search Without Recursive Methods
-
-            //  BinarySearch binarySearch = new BinarySearch();
-            //  binarySearch.AcceptArray();
-            //  binarySearch.SearchElement();
+            int[] numbers = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
             
-            //---------------------------
+            //Bubble sort Ascending Order
+            BubbleSort bubbleSort = new BubbleSort();
+            bubbleSort.SortArray(numbers);
 
-            //Binary Search Recursive Methods
+            Console.WriteLine("The sorted numbers are:");
+            foreach (int element in numbers)
+            {
+                Console.WriteLine(element);
+            }
 
-            //  BinarySearchRecursive binarySearchRecursive = new BinarySearchRecursive();
-            //  binarySearchRecursive.AcceptArray();
-            //  binarySearchRecursive.DisplaySearchedElement();
+           //---------------------------
+
+           //Bubble sot Descending Order
+            BubbleSortDescending bubbleSortDescending = new BubbleSortDescending();
+            bubbleSortDescending.SortArrayDescending(numbers);
+            Console.WriteLine("The sorted numbers are:");
+             foreach (int element in numbers)
+            {
+                 Console.WriteLine(element);
+            }
+     
+        //---------------------------
+
+        //Binary Search With Recursive Method
+
+           BinarySearch binarySearch = new BinarySearch();
+        
+           Console.WriteLine ("Enter number to search?");
+           int searchElement = Convert.ToInt32 (Console.ReadLine ());
             
-            //---------------------------
-
-             // Recursive Methods Find Factorial of given Number
-
-            // Factorial factorial = new Factorial();
-            // factorial.AcceptNumber();
-            
-            // factorial.DisplayFactorial();
-            
-            //---------------------------
-
-             // Recursive Methods Find Element in given Array using Quick Sort
-
-              QuickSort quickSort = new QuickSort();
-              quickSort.AcceptArray();
-              quickSort.QuickSortMethod();
-              quickSort.DisplaySortedArray();
-            
-            //---------------------------
+            Console.WriteLine ("index no. is = " + 
+                binarySearch.SearchElementIndex (numbers, 0, numbers.Length-1, searchElement));
 
 
-           
+        //---------------------------
 
-          
- 
+        // Recursive Methods Find Factorial of given Number
 
+         Factorial factorial = new Factorial();
+          Console.WriteLine("Enter a Number");
+          int number = Convert.ToInt32(Console.ReadLine());
 
-        }
+          int result = factorial.CalculateFactorial(number);
+          Console.WriteLine("Factorial = "+ result);
+
+        //---------------------------
+
+        // Recursive Methods Find Element in given Array using Quick Sort
+
+           QuickSortNumbers quickSortNumbers = new QuickSortNumbers();
+       
+           quickSortNumbers.QuickSort(numbers);
+
+           Console.WriteLine("The sorted numbers are:");
+            foreach (int element in numbers)
+            {
+                Console.WriteLine(element);
+             }
     }
+}
 }
