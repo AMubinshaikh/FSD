@@ -6,16 +6,19 @@ namespace ArraysShuffling
     {
         static void Main(string[] args)
         {
-            // program1
-             ShufflingProgram1 shufflingProgram1 = new ShufflingProgram1();
-             shufflingProgram1.AcceptArray();
-             shufflingProgram1.DisplayShuffledElements();
-            //----------------------------------------------------------
-            // program2
+           
 
-            ShufflingProgram2 shufflingProgram2 = new ShufflingProgram2();
-            shufflingProgram2.AcceptArray(); 
-            shufflingProgram2.Shuffle();
+            //program1
+             ArrayShuffle arrayShuffle = new ArrayShuffle();
+             arrayShuffle.AcceptArray();
+             arrayShuffle.DisplayShuffledElements();
+            // //----------------------------------------------------------
+            // // program2
+
+            ArrayShuffleBasic arrayShuffleBasic = new ArrayShuffleBasic();
+            arrayShuffleBasic.AcceptArray(); 
+            arrayShuffleBasic.Shuffle();
+
         }
     }
 }
