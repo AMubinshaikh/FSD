@@ -4,7 +4,6 @@
 // for the i-th engineer respectively. Return the maximum performance of a team composed of 
 // at most k engineers, since the answer can be a huge number, return this modulo 10^9 + 7.
 // The performance of a team is the sum of their engineers' speeds multiplied by 
-// the minimum efficiency among their engineers. 
 //---------------------------------------------------------------------------------------------
 // Example 1:
 
@@ -44,46 +43,38 @@ namespace EngineerEfficiencyDemo
 {
     public class EngineersEfficiency 
     {
- 
         public int sumOfSpeed=0;
         public int minimumEfficiency ;
-        public void CalculatePerformance (int[] arraySpeed, int[] arrayEfficiency, int numberOfEngineer)
+        int [] tempIndex = new int[10];
+        public void CalculatePerformance (int[] speedList, int[] efficiencyList, int numberOfEngineer)
         {
-            int[] tempIndex = new int[100];
-            int[] tempEfficiency = new int[100];
-            int[] tempSpeed = new int[100];
-            int selectedEngineerNumber;
-           
-            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
-            {
-                Console.WriteLine ("Please select Engineer Number");
-                selectedEngineerNumber = Convert.ToInt32 (Console.ReadLine ());
-                tempIndex[arrayLoop] = (selectedEngineerNumber - 1);
-            }
-
-            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
-            {
-                tempEfficiency[arrayLoop] = arrayEfficiency[tempIndex[arrayLoop]];
-                 tempSpeed[arrayLoop] = arraySpeed[tempIndex[arrayLoop]];    
-            }
-
-            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
-            {
-                Console.WriteLine (tempEfficiency[arrayLoop]);
-            }
-            minimumEfficiency = tempEfficiency[0];
-            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
-            {
-                if (minimumEfficiency > tempEfficiency[arrayLoop]) 
+            
+              for(int outerLoop = 0; outerLoop<numberOfEngineer; outerLoop++)
+                { 
+               for(int innerLoop=0; innerLoop<numberOfEngineer-1; innerLoop++ )
                 {
-                     minimumEfficiency = tempEfficiency[arrayLoop];
-                }     
+                  if(efficiencyList[innerLoop]<efficiencyList[innerLoop+1])
+                 {
+                     
+                    int temp = efficiencyList[(innerLoop+1)];
+                     efficiencyList[innerLoop+1] = efficiencyList[innerLoop];
+                     efficiencyList[innerLoop] = temp;
+                 }
+                }
             }
-
+            //minimumEfficiency = efficiencyList[0];
             for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
             {
-                sumOfSpeed = sumOfSpeed + tempSpeed[arrayLoop];  
+                if (minimumEfficiency < efficiencyList[arrayLoop]) 
+                 {
+                      minimumEfficiency = efficiencyList[arrayLoop];
+               }     
             }
+            
+            for (int outerLoop = 0; outerLoop < numberOfEngineer; outerLoop++) 
+            {
+                 sumOfSpeed = sumOfSpeed + speedList[outerLoop];  
+             }
         }
     }
 }
