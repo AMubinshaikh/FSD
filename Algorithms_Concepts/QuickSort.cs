@@ -1,4 +1,4 @@
-//Quick Sort algorithm with recursion
+//Quick Sort algorithm with recursion   
 using System;
 namespace Algorithms_Concepts
 {

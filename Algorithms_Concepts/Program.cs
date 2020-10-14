@@ -8,7 +8,7 @@ namespace Algorithms_Concepts {
             
             //Bubble sort Ascending Order
             BubbleSort bubbleSort = new BubbleSort();
-            bubbleSort.SortArray(numbers);
+            bubbleSort.Sort(numbers);
 
             Console.WriteLine("The sorted numbers are:");
             foreach (int element in numbers)
@@ -20,7 +20,7 @@ namespace Algorithms_Concepts {
 
            //Bubble sot Descending Order
             BubbleSortDescending bubbleSortDescending = new BubbleSortDescending();
-            bubbleSortDescending.SortArrayDescending(numbers);
+            bubbleSortDescending.SortDescending(numbers);
             Console.WriteLine("The sorted numbers are:");
              foreach (int element in numbers)
             {
@@ -29,7 +29,7 @@ namespace Algorithms_Concepts {
      
         //---------------------------
 
-        //Binary Search With Recursive Method
+        //Binary Search With Recursive Method   
 
            BinarySearch binarySearch = new BinarySearch();
         

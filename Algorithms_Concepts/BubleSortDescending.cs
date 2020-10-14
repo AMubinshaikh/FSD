@@ -1,4 +1,4 @@
-//program for bubble sort 
+//program for bubble sort     
 //Bubble Sort Descending order
 
 using System;
@@ -6,7 +6,7 @@ namespace Algorithms_Concepts
 {
     public class BubbleSortDescending
     { 
-       public void SortArrayDescending(int[] numbers)
+       public void SortDescending(int[] numbers)
         {
            for (int arrayLoop = 0; arrayLoop < numbers.Length; arrayLoop++) 
            {

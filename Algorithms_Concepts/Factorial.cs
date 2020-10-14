@@ -1,4 +1,4 @@
-// program to find factorial of a given number
+// program to find factorial of a given number    
 
 using System;
 namespace Algorithms_Concepts
