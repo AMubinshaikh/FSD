@@ -39,43 +39,32 @@
 //--------------------------------------------------------------------------------------
 
 using System;
-namespace EngineerEfficiencyDemo 
-{
-    public class EngineersEfficiency 
-    {
-        public int sumOfSpeed=0;
-        public int minimumEfficiency ;
-        int [] tempIndex = new int[10];
-        public void CalculatePerformance (int[] speedList, int[] efficiencyList, int numberOfEngineer)
-        {
-            
-              for(int outerLoop = 0; outerLoop<numberOfEngineer; outerLoop++)
-                { 
-               for(int innerLoop=0; innerLoop<numberOfEngineer-1; innerLoop++ )
-                {
-                  if(efficiencyList[innerLoop]<efficiencyList[innerLoop+1])
-                 {
-                     
-                    int temp = efficiencyList[(innerLoop+1)];
-                     efficiencyList[innerLoop+1] = efficiencyList[innerLoop];
-                     efficiencyList[innerLoop] = temp;
-                 }
+namespace EngineerEfficiencyDemo {
+    public class EngineersEfficiency {
+        public int sumOfSpeed = 0;
+        public int minimumEfficiency;
+        int[] tempIndex = new int[10];
+        public void CalculatePerformance (int[] speedList, int[] efficiencyList, int numberOfEngineer) {
+
+            for (int outerLoop = 0; outerLoop < numberOfEngineer; outerLoop++) {
+                for (int innerLoop = 0; innerLoop < numberOfEngineer - 1; innerLoop++) {
+                    if (efficiencyList[innerLoop] < efficiencyList[innerLoop + 1]) {
+
+                        int temp = efficiencyList[(innerLoop + 1)];
+                        efficiencyList[innerLoop + 1] = efficiencyList[innerLoop];
+                        efficiencyList[innerLoop] = temp;
+                    }
                 }
             }
-            //minimumEfficiency = efficiencyList[0];
-            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) 
-            {
-                if (minimumEfficiency < efficiencyList[arrayLoop]) 
-                 {
-                      minimumEfficiency = efficiencyList[arrayLoop];
-               }     
+            for (int arrayLoop = 0; arrayLoop < numberOfEngineer; arrayLoop++) {
+                if (minimumEfficiency < efficiencyList[arrayLoop]) {
+                    minimumEfficiency = efficiencyList[arrayLoop];
+                }
             }
-            
-            for (int outerLoop = 0; outerLoop < numberOfEngineer; outerLoop++) 
-            {
-                 sumOfSpeed = sumOfSpeed + speedList[outerLoop];  
-             }
+
+            for (int outerLoop = 0; outerLoop < numberOfEngineer; outerLoop++) {
+                sumOfSpeed = sumOfSpeed + speedList[outerLoop];
+            }
         }
     }
 }
-
