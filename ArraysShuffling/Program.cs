@@ -11,28 +11,16 @@
 // Explanation: Since x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 then the answer is [2,3,5,4,1,7].
 using System;
 
-namespace ArraysShuffling
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-           
+namespace ArraysShuffling {
+    class Program {
+        static void Main (string[] args) {
 
-            //program1
-             Shuffling shuffling = new Shuffling();
+            Shuffling shuffling = new Shuffling ();
 
-             int[] givenList = {2,5,1,3,4,7};
-             int numberOfSwap = 3;
-             shuffling.Shuffle(givenList , numberOfSwap);
-            // for(arrayLoop = 0; arrayLoop<arraySize; arrayLoop++)
-            // { 
-            //     Console.Write("x"+(arrayLoop+1) + " = "+ array_x[arrayLoop] +"  y"+(arrayLoop+1) + " = "+ array_y[arrayLoop] + ", ");
-            // }
-            // //----------------------------------------------------------
-            // // program2
+            int[] givenList = { 2, 5, 1, 3, 4, 7 };
+            int numberOfSwap = 3;
+            shuffling.Shuffle (givenList, numberOfSwap);
 
-       
         }
     }
 }

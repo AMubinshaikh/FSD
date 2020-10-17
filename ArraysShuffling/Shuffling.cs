@@ -1,22 +1,16 @@
-
 using System;
-namespace ArraysShuffling
-{
-    public class Shuffling
-    {
-       
-       public void Shuffle(int[] givenList , int numberOfSwap)
-        {
-           int[] shuffleList = new int[100];
-           for(int outerLoop=0; outerLoop<numberOfSwap; outerLoop++)
-           {
-                Console.Write("   x"+(outerLoop+1) + " = " + givenList[outerLoop]);
-           }
-           Console.WriteLine();
-           for(int outerLoop=numberOfSwap; outerLoop<numberOfSwap*2; outerLoop++)
-           {
-                Console.Write("   y"+(outerLoop-2) + " = " + givenList[outerLoop]);
-           }
-        }
-    }
+namespace ArraysShuffling {
+     public class Shuffling {
+
+          public void Shuffle (int[] givenList, int numberOfSwap) {
+               int[] shuffleList = new int[100];
+               for (int number = 0; number < numberOfSwap; number++) {
+                    Console.Write ("   x" + (number + 1) + " = " + givenList[number]);
+               }
+               Console.WriteLine ();
+               for (int number = numberOfSwap; number < numberOfSwap * 2; number++) {
+                    Console.Write ("   y" + (number - 2) + " = " + givenList[number]);
+               }
+          }
+     }
 }
