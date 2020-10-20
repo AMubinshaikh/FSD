@@ -13,9 +13,6 @@ namespace Algorithms_Concepts {
             foreach (int element in numbers) {
                 Console.WriteLine (element);
             }
-
-            //---------------------------
-
             //Bubble sot Descending Order
             BubbleSortDescending bubbleSortDescending = new BubbleSortDescending ();
             bubbleSortDescending.SortDescending (numbers);
@@ -23,20 +20,13 @@ namespace Algorithms_Concepts {
             foreach (int element in numbers) {
                 Console.WriteLine (element);
             }
-
-            //---------------------------
-
             //Binary Search With Recursive Method   
 
             BinarySearch binarySearch = new BinarySearch ();
-
             Console.WriteLine ("Enter number to search?");
             int searchElement = Convert.ToInt32 (Console.ReadLine ());
-
             Console.WriteLine ("index no. is = " +
                 binarySearch.SearchElementIndex (numbers, 0, numbers.Length - 1, searchElement));
-
-            //---------------------------
 
             // Recursive Methods Find Factorial of given Number
 
@@ -47,14 +37,10 @@ namespace Algorithms_Concepts {
             int result = factorial.CalculateFactorial (number);
             Console.WriteLine ("Factorial = " + result);
 
-            //---------------------------
-
             // Recursive Methods Find Element in given Array using Quick Sort
 
             QuickSort quickSort = new QuickSort ();
-
             quickSort.QuickSorts (numbers);
-
             Console.WriteLine ("The sorted numbers are:");
             foreach (int element in numbers) {
                 Console.WriteLine (element);
