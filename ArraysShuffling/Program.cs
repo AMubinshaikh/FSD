@@ -14,13 +14,10 @@ using System;
 namespace ArraysShuffling {
     class Program {
         static void Main (string[] args) {
-
             Shuffling shuffling = new Shuffling ();
-
             int[] givenList = { 2, 5, 1, 3, 4, 7 };
             int numberOfSwap = 3;
             shuffling.Shuffle (givenList, numberOfSwap);
-
         }
     }
 }
