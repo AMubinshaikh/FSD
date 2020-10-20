@@ -16,5 +16,4 @@ namespace Algorithms_Concepts {
             }
         }
     }
-
 }
