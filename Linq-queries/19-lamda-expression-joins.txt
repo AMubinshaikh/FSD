@@ -1,0 +1,21 @@
+Join (
+c => c.CustomerId,
+o => o.CustomerId,
+
+(c , o) => 
+           new
+                        {
+                           FirstName = c.FirstName,
+                           LastName = c.LastName,
+                           State = c.State,
+                           City = c.City,
+                           OrderDate = o.OrderDate,
+                           Status = o.Status,
+                           Comments = o.Comments,
+                           ShipperId = o.ShipperId,
+                           ShipperDate = o.ShipperDate
+                        } 
+        )
+
+
+
