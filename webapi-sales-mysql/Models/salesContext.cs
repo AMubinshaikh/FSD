@@ -16,13 +16,12 @@ namespace webapi_sales_mysql.Models
         }
 
         public virtual DbSet<Customers> Customers { get; set; }
-        public virtual DbSet<Orders> Orders { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseMySQL("Server=localhost;Database=sales;Uid=root;Pwd=spa0808c#;");
             }
         }
@@ -69,14 +68,14 @@ namespace webapi_sales_mysql.Models
                     .HasMaxLength(10);
             });
 
-            modelBuilder.Entity<Orders>(entity =>
-            {
-                entity.HasNoKey();
+            // modelBuilder.Entity<Orders>(entity =>
+            // {
+            //     entity.HasNoKey();
 
-                entity.ToTable("orders");
+            //     entity.ToTable("orders");
 
-                entity.Property(e => e.Quantity).HasColumnName("quantity");
-            });
+            //     entity.Property(e => e.Quantity).HasColumnName("quantity");
+            // });
 
             OnModelCreatingPartial(modelBuilder);
         }
