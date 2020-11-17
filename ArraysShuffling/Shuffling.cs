@@ -1,16 +1,22 @@
 using System;
 namespace ArraysShuffling {
      public class Shuffling {
+          public int[] Shuffle (int[] givenList, int numberOfSwap) {
+               int[] result = new int[givenList.Length];
 
-          public void Shuffle (int[] givenList, int numberOfSwap) {
-               int[] shuffleList = new int[100];
-               for (int number = 0; number < numberOfSwap; number++) {
-                    Console.Write ("   x" + (number + 1) + " = " + givenList[number]);
+               int evenIndex = 0, oddIndex = numberOfSwap;
+
+               for (int arrayLoop = 0; arrayLoop < givenList.Length; arrayLoop++) {
+                    if (arrayLoop % 2 == 0) {
+                         result[arrayLoop] = givenList[evenIndex];
+                         evenIndex++;
+                    } else {
+                         result[arrayLoop] = givenList[oddIndex];
+                         oddIndex++;
+                    }
                }
-               Console.WriteLine ();
-               for (int number = numberOfSwap; number < numberOfSwap * 2; number++) {
-                    Console.Write ("   y" + (number - 2) + " = " + givenList[number]);
-               }
+
+               return result;
           }
      }
 }
