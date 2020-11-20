@@ -1,0 +1,173 @@
+PostgresSQL is
+-- object relational database management system 
+-- Modern
+-- Open Source
+
+creating a database
+--------------------------------
+CREATE DATABASE test;
+
+show database
+\l
+
+switch database
+psql -U postgres test
+
+----------------------------------------------
+\c for connect
+
+DROP DATABASE test;
+
+--------------------------------------------
+CREATING TABLE WITHOUT CONSTRAINT
+
+test=# CREATE TABLE person (
+test(# id INT,
+test(# first_name VARCHAR(50),
+test(# last_name VARCHAR(50),
+test(# gender VARCHAR(7),
+test(# date_of_birth DATE );
+
+\d person ( description of table person)
+-------------------------------------------------------------------------
+CREATING TABLE WITH CONSTRAINTS
+
+test=# CREATE TABLE person (
+test(# id BIGSERIAL NOT NULL PRIMARY KEY,
+test(# first_name VARCHAR(50) NOT NULL,
+test(# last_name VARCHAR(50) NOT NULL,
+test(# gender VARCHAR(7) NOT NULL,
+test(# date_of_birth DATE NOT NULL,
+test(# email VARCHAR(150) );
+
+-------------------------------------------------------------------------
+insert into
+INSERT INTO person(first_name, last_name, gender, date_of_birth)
+VALUES('Anne', 'Smith', 'FEMALE', date '1988-01-09');
+
+INSERT INTO person(first_name, last_name, gender, date_of_birth, email)
+test-# VALUES('Jake', 'Jones', 'MALE', date '1990-12-31','jake@gmail.com');
+------------------------------------------------------------------------
+test-# \i /Users/Vicky/Downloads/person.sql
+
+------------------------------------------------------------------------
+SORTING 
+ASCENDING
+SELECT * FROM person ORDER BY country;
+
+DESCENDING
+SELECT * FROM person ORDER BY country DESC;
+
+-----------------------------------------------------------------
+
+DISTINCT
+SELECT DISTINCT(country) FROM person ORDER BY country;
+
+----------------------------------------------------------------- 
+SELECT , AND
+SELECT * FROM person WHERE gender='Female' AND (country='China' OR country='Poland');
+
+SELECT * FROM person WHERE gender='Female' AND (country='China' OR country='Poland') AND last_name=''Pietersma');
+
+---------------------------------------------------------------
+COMPARISON OPERATORS
+
+1 = 1 :T
+=------------------------------------------------------
+
+LIMIT, OFFSET, FETCH 
+
+SELECT * FROM person LIMIT 10;
+SELECT * FROM person OFFSET 10 LIMIT 5; // DISPLAY RECORD AFTER 10 AND 5 RECORD WILL DISPLAY
+SELECT * FROM person OFFSET 5 FETCH FIRST 5 ROW ONLY;
+------------------------------------------------
+IN 
+
+test=# SELECT *
+test-# FROM person
+test-# WHERE country IN('Poland','China','France');
+
+SELECT * FROM person WHERE country IN('Poland', 'China', 'Brazil') ORDER BY country;
+
+-----------------------------------------------------
+
+BETWEEN
+SELECT * FROM person WHERE date_of_birth BETWEEN DATE'2019-01-01' AND '2020-01-01';
+
+----------------------------------------------------
+LIKE & ILIKE LIKE is an case sensitive where ILIKE is not
+SELECT * FROM person WHERE email LIKE '%@bloomberg.com';
+
+SELECT country COUNT(*) FROM person GROUP BY country ORDER BY country;
+SELECT country, COUNT(*) FROM person GROUP BY country HAVING COUNT(*) > 5  ORDER BY COUNTRY;
+
+---------------------------------------------------------
+MATHEMATICAL 
+
+SELECT id,make,model,price, price * .10 FROM car;
+SELECT id,make,model,price, ROUND(price* .10, 2 ) FROM car;
+SELECT id,make,model,price, ROUND(price* .10, 2 ), ROUND (price - (price* .10)) FROM car;
+SELECT id,make,model,price, ROUND(price* .10, 2 ), ROUND (price - (price* .10),2) FROM car;
+
+SELECT COALESCE(email, 'Email not provided') FROM person;
+
+EXTRACTING DATA
+------------------------------------------------------------------------------------------------
+SELECT EXTRACT(YEAR FROM NOW());
+SELECT EXTRACT(MONTH FROM NOW());
+-- we can calculate age, number of years like joining date and current date
+SELECT first_name,last_name, date_of_birth, AGE (NOW(), date_of_birth) AS AGE FROM person;
+
+------------------------------------------
+ALTER TABLE person DROP CONSTRAINT person_pkey;
+
+ALTER TABLE person ADD PRIMARY KEY (id) ;
+
+SELECT email, COUNT(*) FROM person GROUP BY email;
+SELECT email, COUNT(*) FROM person GROUP BY email HAVING COUNT(*) > 1;
+ALTER TABLE person ADD CONSTRAINT unique_email_address UNIQUE (email);
+ALTER TABLE person ADD UNIQUE (email);
+ALTER TABLE person ADD CONSTRAINT gender_constraint CHECK ( gender ='female' OR gender='male');
+
+-------------
+delete 
+DELETE * FROM person WHERE gender='male' AND country = 'Nigeria';
+
+---------------
+update 
+UPDATE person SET email = 'ommar"gmail.com' WHERE id = 3;
+UPDATE person SET first_name ='ommar' , last_name = 'Montana', email = 'omar.montana@hotmail.com' WHERE id = 20;
+
+ON CONFLICT DO NOTHING
+INSERT INTO person (id, first_name, last_name, gender, email, date_of_birth, country) 
+VALUES (2017, 'RUSS' ,'Ruddoch', 'Male', 'rruddoch@gmail.com', DATE '1952-01-01' , 'Norwat')
+ON CONFLICT (id) DO NOTHING; 
+
+------------------------------------------
+
+ADDING FOREIGN KEY
+
+person_id BIGINT REFERENCES car(id),
+UNIQUE (car_id);
+
+-----------------------------
+INNER JOINS
+
+SELECT * FROM person
+JOIN car ON person.car_id = car.id;
+\x for expanding display
+--------------------------
+
+LEFT JOINS
+SELECT * FROM person
+LEFT JOIN car ON car.id  = person.car_id ;
+
+--------------------------
+
+GENERATE .csv file in POSTGRES
+-- create directory
+\copy (SELECT * FROM person LEFT JOIN car ON car.id  = person.car_id) TO '/Users/Vicky/Desktop' DELIMITER ',' CSV HEADER;
+
+-- create file
+\copy (SELECT * FROM person LEFT JOIN car ON car.id  = person.car_id) TO '/Users/Vicky/Desktop/results.csv' DELIMITER ',' CSV HEADER;
+
