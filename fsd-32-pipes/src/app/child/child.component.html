@@ -1,0 +1,11 @@
+<p>child works!</p>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 *ngIf="!productSelected"> please select any products</h2>
+        <h2 *ngIf="productSelected"> {{selectedProductName}} is selected</h2>
+
+        <button (click)="onAddProduct()">Add to cart</button>
+    </div>
+</div>
