@@ -1,0 +1,42 @@
+2020-11-13 16:57:36.2748|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-13 16:57:36.3985|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-13 16:57:36.3985|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-13 16:57:36.3985|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-13 16:57:36.3985|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Dotnet\Logging-Nlog
+2020-11-13 16:58:05.4013|INFO|Microsoft.Hosting.Lifetime|Application is shutting down...
+2020-11-13 16:58:21.5393|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-13 16:58:21.6229|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-13 16:58:21.6287|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-13 16:58:21.6287|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-13 16:58:21.6287|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Dotnet\Logging-Nlog
+2020-11-13 16:58:27.0088|INFO|Microsoft.Hosting.Lifetime|Application is shutting down...
+2020-11-13 17:08:21.4150|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-13 17:08:21.5003|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-13 17:08:21.5046|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-13 17:08:21.5046|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-13 17:08:21.5046|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Dotnet\Logging-Nlog
+2020-11-13 17:09:16.2558|INFO|Microsoft.Hosting.Lifetime|Application is shutting down...
+2020-11-13 17:09:53.6751|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-13 17:09:53.7547|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-13 17:09:53.7547|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-13 17:09:53.7547|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-13 17:09:53.7547|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Dotnet\Logging-Nlog
+2020-11-13 17:11:31.6205|INFO|Microsoft.Hosting.Lifetime|Application is shutting down...
+2020-11-13 17:11:47.3843|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-13 17:11:47.4549|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-13 17:11:47.4549|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-13 17:11:47.4549|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-13 17:11:47.4549|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Dotnet\Logging-Nlog
+2020-11-13 17:12:07.1703|INFO|Microsoft.Hosting.Lifetime|Application is shutting down...
+2020-11-13 17:12:16.8337|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-13 17:12:16.9120|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-13 17:12:16.9120|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-13 17:12:16.9120|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-13 17:12:16.9120|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Dotnet\Logging-Nlog
+2020-11-13 17:12:27.9282|INFO|Microsoft.Hosting.Lifetime|Application is shutting down...
+2020-11-13 17:20:38.1309|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001
+2020-11-13 17:20:38.2075|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000
+2020-11-13 17:20:38.2075|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2020-11-13 17:20:38.2075|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2020-11-13 17:20:38.2075|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Dotnet\Logging-Nlog
+2020-11-13 17:40:27.4409|INFO|Microsoft.Hosting.Lifetime|Application is shutting down...
