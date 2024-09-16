@@ -1,0 +1,24 @@
+.page-area{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    border: 1px solid red;
+    background-color: dodgerblue;
+    color:blue;
+    padding: 20px;
+    
+
+    
+
+}
+
+p
+{
+    padding: 20px;
+    background-color: dodgerblue;
+    color:blue;
+    font-size: medium;
+    border: 1px solid red;
+}
