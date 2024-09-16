@@ -1,0 +1,180 @@
+from c in Customers
+select c
+
+var data = from c in Customers
+select c;
+data.Dump();
+
+.Select (c => c)
+
+--------------------------------------------------------------------------------------
+
+from c in Customers
+select c.FirstName
+
+var data = from c in Customers
+select c.FirstName;
+data.Dump();
+
+.Select (c => c.FirstName)
+
+-------------------------------------------------------------
+
+from c in Customers
+select new
+{
+c.FirstName,
+c.LastName,
+c.Points
+}
+
+
+var data = from c in Customers
+                select new
+                 {
+                c.FirstName,
+                c.LastName,
+                c.State
+               }
+
+
+lamda
+
+.Select
+(
+c => 
+new
+{
+FirstName = c.FirstName,
+ LastName = c.LastName,
+ State = c.State
+}
+)
+
+
+
+
+
+----------------------------------------------------------------------------------
+from c in Customers
+where c.Points>3000
+select c.FirstName
+
+var data = from c in Customers
+where c.Points>3000
+select c.FirstName
+data.Dump();
+
+.Where(c => (c.Points>3000))
+.Select(c => c.FirstName)
+
+
+-----------------------------------------------------------------------
+
+
+
+from c in Customers 
+where c.Points>3000 && c.Points<4000
+select c.FirstName
+
+var data = from c in Customers
+                where c.Points>3000 && c.Points<4000
+                selet c.FirstName;
+dara.Dump();
+
+.Where(c => ((c.Points>3000) && (c.Points<4000)))
+.Select (c => c.FirstName)
+
+
+---------------------------------------------------------------
+from c in CUstomers 
+orderby c.Points
+select new
+{
+
+}
+
+
+
+
+
+
+.OrderBy(c => c.Poins)
+.Select(c => 
+           new{ 
+		       FirstName = c.FirstName,
+			   LastName = c.LastName,
+			   State = c.State
+			    })
+
+
+
+----------------------------------------------------------------
+
+from c in Customers
+orderby c.Points descending
+select new
+{
+c.FristName,
+c.LastName,
+c.Points
+}
+
+
+var data = from c in Customers
+                orderby c.Points descending
+                select new
+               {
+               c.FirstName,
+              c.LastName,
+              c.Points
+               };
+ data.Dump();
+
+
+.OrderByDescending(c => c.Points)
+.Select(c => 
+new
+{
+FirstName = c.FirstName,
+LastName = c.LastName,
+State = c.State
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
