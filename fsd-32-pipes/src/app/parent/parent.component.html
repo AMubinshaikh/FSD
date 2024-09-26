@@ -1,0 +1,34 @@
+<p>parent works!</p>
+
+
+
+<div class="alert alert-light border d-flex" *ngIf="addedProduct">
+    <p class="text-success"> <strong>{{addedProduct}}</strong> is selected and added in cart</p>
+
+    <button class="ml-auto"> Checkout</button>
+</div>
+
+<p>added to cart</p>
+
+<div class="page-area">
+
+    <div class="card">
+        <div class="col-md-3">
+            <p>Mobile</p>
+            <button (click)="selectProduct('Mobile')">Select this product</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="col-md-3">
+            <p>Laptop</p>
+            <button (click)="selectProduct('Laptop')">Select this product</button>
+        </div>
+    </div>
+</div>
+<app-child class="w-100" 
+[productSelected]="proSelected" 
+[selectedProductName]="selProductName"
+(addedProduct)= "onAddedProduct($event)"
+></app-child>
+
