@@ -1,0 +1,6 @@
+--- AGGREGATE FUNCTIONS SUM, MIN, MAX, AVG, COUNT
+
+SELECT SUM(price), MIN(price), MAX(price), AVG(price) FROM car;
+
+SELECT COUNT(DISTINCT (make)) FROM car;
+
