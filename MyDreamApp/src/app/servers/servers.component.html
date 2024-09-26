@@ -1,0 +1,41 @@
+<!-- property binding 
+here disables button is property which is bind woth function allowNewServer -->
+
+<!-- types of databinding-->
+<!-- difference is when we want to change some events we'll use property binding -->
+<!--  when we want to change some text or messages we'll use string interpolation  -->
+
+
+<!-- <input type="Text"
+class="form-control"
+(input)="OnUpdateServerName($event)"> -->
+<label >Server name</label>
+<input type="text" 
+class="form-control"
+[(ngModel)] ="serverName">
+
+
+
+
+
+
+<!-- <p>{{serverName}}</p> -->
+<button class="btn btn-danger" [disabled]="!allowNewServers" (click)="onCreateServer()">
+    Add Server
+</button>
+<!-- <p [innerText] = "allowNewServers"></p> -->
+<!-- <p> {{serverCreatedStatus}}</p> -->
+
+<p *ngIf = "serverCreated; else noServer"> server was created, server name is {{serverName}}</p>
+<hr>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
+
+<app-makes *ngFor = "let server of servers"></app-makes>
+
+
+<!-- this is string interpolation  -->
+<!-- <h4>{{ allowNewServers }}</h4> -->
+
+<!-- <p [innerText]="allowNewServers"></p> -->
